@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    /* Colors */
+    --blue-tone-one: #03045e;
+    --blue-tone-two: #0077b6;
+    --blue-tone-three: #00b4d8;
+    --blue-tone-four: #48cae4;
+    --blue-tone-five: #90e0ef;
+    --blue-tone-six: #caf0f8;
+    --white: #FFF;
+    --black: #000;
+    --gray: #cacaca;
+    /* Fonts */
+    --primary-font: "Montserrat", sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: var(--primary-font);
+    font-size: 16px;
+    background-color: var(--white);
+    color: var(--black);
+    background-color: var(--gray);
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100dvh - 8rem);
+    padding: 4rem 1rem;
+}
+
+.loading-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    width: 300px;
+    background-color: var(--white);
+    border-radius: 16px;
+}
+
+.loading-card h2 {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+}
+
+.circles-loading-list {
+    display: flex;
+    gap: .5rem;
+}
+
+.circles-loading-list__item {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+#circle-1 {
+    background-color: var(--blue-tone-six);
+    animation: showing 1s ease-in-out infinite ;
+}
+
+#circle-2 {
+    background-color: var(--blue-tone-five);
+    animation: showing 1s ease-in-out infinite .2s;
+}
+
+#circle-3 {
+    background-color: var(--blue-tone-four);
+    animation: showing 1s ease-in-out infinite .4s;
+}
+
+#circle-4 {
+    background-color: var(--blue-tone-three);
+    animation: showing 1s ease-in-out infinite .6s;
+}
+
+#circle-5 {
+    background-color: var(--blue-tone-two);
+    animation: showing 1s ease-in-out infinite .8s;
+}
+
+#circle-6 {
+    background-color: var(--blue-tone-one);
+    animation: showing 1s ease-in-out infinite 1s;
+}
+
+.credits {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.credits a {
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--blue-tone-one);
+}
+
+@keyframes showing {
+    to {
+        opacity: 1;
+    }
+}
